@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="logo"><img src="images/logo2.png" alt=""></div>
+        <div class="head">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="search" id="search"  placeholder="Press / to search">
+            </div>
+            <div class="admin-information">
+                <div class="notification"><i class="fa-regular fa-bell"></i></div>
+                <div class="admin-image"><img src="images/person.png" alt=""></div>
+                <div class="admin-name">
+                    <h5>
+                        Admin Name
+                    </h5>
+                    <span class="arrow">
+                        <i class="fa-sharp fa-solid fa-angle-down"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="sec1">
+        <!-- sidebar -->
+        <aside class="sidebar">
+            <label for="open-menu">
+                <input type="checkbox" id="open-menu">
+                <i class="fa-solid fa-bars bars-for-mobile"></i>
+                <menu class="menu">
+                    <i class="fa-solid fa-bars bars"></i>
+                    <ul class="ul">
+                        <li><a href="./index.html">Main</a></li>
+                        <li><a href="form.html" style="color: #1b3c42;">form</a></li>
+
+                        <label for="dashboards-menu">
+                            <input type="checkbox" name="" id="dashboards-menu">
+                            <div class="dashboards-title">
+                                <i class="fa-solid fa-layer-group layer-group"></i>
+                                <span>Dashboards</span>
+                                <i class="fa-sharp fa-solid fa-angle-down" ></i>
+                            </div>
+                            <li class="dashboards">
+                                <menu class="inside-dashboards-menu">
+                                    <li>
+                                        <a href="./index.html">dashboard 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="">dashboard 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="">dashboard 3</a>
+                                    </li>
+                                </menu>
+                            </li>
+                        </label>
+
+                        <li><a href="">User Insights</a></li>
+                        <label for="resources-menu">
+                            <input type="checkbox" name="" id="resources-menu">
+                            <div class="resource-title">
+                                <i class="fa-solid fa-layer-group layer-group"></i>
+                                <span>Resources</span>
+                                <i class="fa-sharp fa-solid fa-angle-down" ></i>
+                            </div>
+                            <li class="resources">
+                                <menu class="inside-resources-menu">
+                                    <li>
+                                        <a href="">resource 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="">resource 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="">resource 3</a>
+                                    </li>
+                                </menu>
+                            </li>
+                        </label>
+
+                        
+                        <li><a href="">addresses</a></li>
+                        <li><a href="">comments</a></li>
+                        <li><a href="">posts</a></li>
+                        <li><a href="">purchases</a></li>
+                        <li><a href="">roles</a></li>
+                        <li><a href="">tags</a></li>
+                        <li><a href="">users</a></li>
+                    </ul>
+                </menu>
+            </label>
+        </aside>
+        <!-- main -->
+        <div class="main">
+            <div class="form-title">
+                <h1>personal info</h1>
+                <span>
+                    Update your photo and personal data here
+                </span>
+            </div>
+            <form class="form" action="">
+                <div class="name">
+                    <label for="">Name</label>
+                    <input type="text" placeholder="First Name" required  class="first-name">
+                    <input type="text" placeholder="Last Name" required  class="last-name">
+                </div>
+
+                <!-- email -->
+                <div class="email">
+                    <label for="">Email address</label>
+                    <input type="email" placeholder="@gmail.com" required  class="mail">
+                </div>
+
+                <!-- country  -->
+                <div class="country">
+                    <label for="">Country</label>
+                    <select name="" id="">
+                        <optgroup label="Arab countries">
+                            <option value="Egypt" >
+                                Egypt
+                            </option>
+                            <option value="Saudi" >
+                                Saudi
+                            </option>
+                            <option value="Morocco" >
+                                Morocco
+                            </option>
+                            <option value="Morocco" >
+                                Syria
+                            </option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <!-- message -->
+                <div class="message">
+                    <label for="">Your message</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <!-- supmit -->
+                <div class="submit">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <input type="submit" name="send" id="send" placeholder= "Send Message"  autocomplete="off" required class="submit-inp">
+                </div>
+            </form>
+        </div>   
+    </section>
+</body>
+</html>

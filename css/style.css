@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sec1 {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+}
+/* header */
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+    background-color: #173136;
+}
+/* logo */
+header .logo {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    width: 100%;
+}
+/* main header */
+header .head{
+    width: 80.5%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search {
+    width: 342px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0 15px;
+    background-color: white;
+}
+.search i {
+    margin-right: 10px;
+}
+.search input {
+    outline: none;
+    border: none;
+    color: rgba(0, 0, 0, 0.637);
+    font-size: 11px;
+}
+
+
+/* admin information */
+header .admin-information {
+    width: 166px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .admin-information i  {
+    color: rgba(255, 255, 255, 0.514);
+    font-size: 16px;
+}
+header .admin-information .admin-image {
+    width: 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header .admin-information .admin-image img {
+    width: 100%;
+}
+header .admin-information .admin-name {
+    width: 56%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.514);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* sidebar */
+.sec1 .sidebar {
+    width: 20%;
+    height: 100%;
+}
+.sec1 .sidebar .menu {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    transition: 0.7s;
+}
+.sec1 .sidebar .menu .ul {
+    width: 60%;
+    height: 65%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+li, a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 13.3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.445);
+    transition: 0.4s;
+}
+.sec1 .sidebar .menu .ul li a:hover {
+    color: rgb(10, 23, 26)
+}
+.sec1 .sidebar .menu .ul li i {
+    color: #224c53;
+}
+.dashboards, .resources {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.dashboards .grip, .layer-group{
+    margin-left: -24px;   
+    margin-top: 3px; 
+    position: absolute;
+}
+.resources .layer-group {
+    margin-left: -22.5px;
+}
+#open-menu {
+    display: none;
+}
+#open-menu:checked ~ .menu {
+    transform: translateX(-266px);
+}
+.bars {
+    position: absolute;
+    right: -20px;
+    top: 22px;
+}
+.sec1 .sidebar  .bars-for-mobile {
+    display: none;
+}
+
+#dashboards-menu {
+    display: none;
+}
+
+.inside-resources-menu, .inside-dashboards-menu {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 0;
+}
+#resources-menu, .dashboards-menu {
+    display: none;
+}
+.resources, .dashboards {
+    opacity: 0;
+}
+.resource-title, .dashboards-title{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.445);
+}
+.resource-title i, .dashboards-title i {
+    font-size: 13px;
+    color:#224c53;
+}
+#resources-menu:checked ~ .resources {
+    height: 100px;
+    opacity: 1;
+}
+#dashboards-menu:checked ~ .dashboards {
+    height: 100px;
+    opacity: 1;
+}
+/* main section */
+.sec1 .main {
+    width: 78%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.user-rates {
+    width: 100%;
+    height: 27%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: start;
+    padding-bottom: 10px;
+    transform: translateY(200px);
+    animation-name: animation;
+    animation-play-state: running;
+    animation-fill-mode: both;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: 1.3s;
+}
+@keyframes animation{
+    0% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateX(0);
+}
+}
+/* current-users */
+.user-rates .current-users, .new-users {
+    width: 330px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: #173136;
+    border-radius: 7px;
+    margin-right: 20px;
+}
+.user-rates .row1 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 23px;
+}
+.user-rates h1 {
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(255, 255, 255, 0.651);
+}
+.user-rates .current-users select {
+    padding: 5px;
+    width: 90px;
+    height: 25px;
+    background-color: #139EDF;
+    border: none;
+    border-radius: 2px;
+    font-size: 11px;
+    color: white;
+}
+.user-rates .rate {
+    width: 37%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 23px;
+}
+.user-rates .current-users .rate img{
+    width: 45px;
+}
+.user-rates span {
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(255, 255, 255, 0.651);
+}
+.user-rates .new-users h1, .new-users span {
+    color: #173136;
+}
+
+/*  new users */
+.new-users {
+    background-color: white;
+}
+.user-rates .new-users .rate {
+    width: 100%;
+    height: 70px;
+    flex-direction: column;
+    align-items: start;
+}
+.user-rates .new-users .new-user-rate {
+    width: 90%;
+    height: 15px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+}
+.user-rates .new-users .new-user-rate div {
+    width: 75%;
+    height: 100%;
+    background-color: rgb(0, 158, 0);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius:  20px;
+}
+
+/* users table */
+.users {
+    width: 95%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation-name: animation;
+    animation-play-state: running;
+    animation-fill-mode: both;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: 1.8s;
+}
+.users .title h1 {
+    font-weight: 200;
+    font-size: 21px;
+    padding: 3px;
+    margin: 0 0 -20px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: #173136;
+}
+.users .search, .users .search input {
+    background-color: #173136;
+    color: white;
+}
+.users .search {
+    width: 342px;
+    height: 35px;
+}
+.users .users-table {
+    width: 100%;
+    height: 75%;    
+    background-color: white;
+    border-radius: 7px;
+}
+.users .users-table table {
+    width: 100%;
+    height: 100%;
+    border-left: none;
+    border-right: none;
+    padding: 25px;
+    padding-bottom: 0;
+}
+
+/* table header */
+.users .users-table table thead {
+    font-size: 11px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #224c53d8;
+}
+
+/* table boody */
+.users .users-table table tbody {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #173136d3;
+}
+.users .users-table table tbody tr td {
+    cursor: pointer;
+}
+.users .users-table table tbody tr td img{
+    width: 25px;
+}
+.users .users-table table tbody .id {
+    width: 120px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #139EDF;
+}
+.users .users-table table tbody tr td .input {
+    width: 35px;
+}
+.users .users-table table tbody tr td .check, .check-red{
+    font-size: 9px;
+    border: 1px solid rgb(0, 175, 0);
+    border-radius: 50%;
+    padding: 3px;
+    color:  rgb(0, 175, 0);
+}
+.users .users-table table tbody tr td .check-red {
+    color: red;
+    border-color: red;
+}
+
+/* footer */
+.users .users-table .footer {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #17313669;
+    padding: 15px 25px 25px 25px;
+}
+.users .users-table .footer span {
+    font-size: 10px;
+}
+/* form */
+.form-title {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#224c53;
+}
+.form-title span {
+    padding: 8px 0;
+    color: #224c538a;
+    font-size: 14px;
+}
+.form {
+    width: 90%;
+    height: 90%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: animation;
+    animation-play-state: running;
+    animation-fill-mode: both;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: 1.3s;
+}
+.form div {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.062);
+}
+.form label {
+    color:#224c53ce;
+    font-weight: 600;
+    font-size: 14px;
+}
+.form input, select, textarea {
+    width: 200px;
+    height: 37px;
+    border: 1px solid  rgba(0, 0, 0, 0.123);
+    padding: 7px;
+    border-radius: 5px;
+    color: #173136;
+    outline: none;
+}
+.form .name .first-name{
+    margin-left: 350px;
+}
+.form .email .mail, select{
+    width: 430px;
+    color: #224c53ce;
+}
+.form .message {
+    border: none;
+    padding: 88px 0;
+}
+.form .message textarea{
+    width: 430px;
+    height: 140px;
+}
+
+
+.form .submit{
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    border-bottom: none;
+}
+
+.form .submit-inp {
+    color: white;
+    font-weight: 600;
+    background-color: #173136;
+}
+.form .submit i{
+    color: white;
+    z-index: 9;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    top: 14px;
+    right: 16%;
+}
