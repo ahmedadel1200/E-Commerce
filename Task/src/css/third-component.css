@@ -1,0 +1,25 @@
+.main-third{
+    margin-left: 40%;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.heade{
+    font-size: 120px;
+    transform: translate(60px,40px);
+    color: #F39F5A ;
+}
+.contents{
+    transform: translate(35px,40px);
+
+}
+.contents p {
+    transform: translateY(20px);
+    color: #D8D9DA;
+
+}
